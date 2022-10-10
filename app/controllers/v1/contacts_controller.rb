@@ -5,6 +5,13 @@ class V1::ContactsController < ApplicationController
     render json: :@contacts, status: :ok
   end
 
+  def create
+    @contacts = Contact.new(contact_params)
+
+    @contact.save
+    render json: @contact, status: :created
+  end
+
   private
 
     def contact_params
