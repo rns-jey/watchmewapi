@@ -16,6 +16,7 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'net-smtp', require: false
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
