@@ -4,4 +4,10 @@ class V1::ContactsController < ApplicationController
 
     render json: :@contacts, status: :ok
   end
+
+  private
+
+    def contact_params
+      params.require(:contact).permit(:first_name, :last_name, :email)
+    end
 end
