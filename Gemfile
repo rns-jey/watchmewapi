@@ -17,6 +17,7 @@ gem 'puma', '~> 5.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'net-smtp', require: false
 gem 'devise'
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
