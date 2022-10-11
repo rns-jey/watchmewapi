@@ -1,3 +1,6 @@
 class Account < ApplicationRecord
-  belongs_to :owner, class_name: "User"
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
+  belongs_to :owner, class_name: 'User'
 end
