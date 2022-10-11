@@ -6,10 +6,10 @@ class V1::ContactsController < ApplicationController
   end
 
   def create
-    @contacts = Contact.new(contact_params)
+    @contact = Contact.new(contact_params)
 
     @contact.save
-    render json: @contact, status: :created
+    render :create, status: :created
   end
 
   def destroy
