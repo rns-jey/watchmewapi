@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_11_122547) do
+ActiveRecord::Schema.define(version: 2022_10_12_013323) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -28,8 +28,18 @@ ActiveRecord::Schema.define(version: 2022_10_11_122547) do
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_contacts_on_user_id"
+    t.integer "organization_id"
+    t.index ["organization_id"], name: "index_contacts_on_organization_id"
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.string "tax_payer_number"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_organizations_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,5 +66,5 @@ ActiveRecord::Schema.define(version: 2022_10_11_122547) do
   end
 
   add_foreign_key "accounts", "users", column: "owner_id"
-  add_foreign_key "contacts", "users"
+  add_foreign_key "contacts", "organizations"
 end
