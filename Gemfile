@@ -19,6 +19,7 @@ gem 'net-smtp', require: false
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
 gem 'friendly_id', '~> 5.4.0'
+gem 'rubocop', '~> 1.36', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
