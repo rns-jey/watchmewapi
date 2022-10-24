@@ -15,11 +15,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'net-smtp', require: false
 gem 'devise'
-gem 'simple_token_authentication', '~> 1.0' # see semver.org
 gem 'friendly_id', '~> 5.4.0'
+gem 'net-smtp', require: false
 gem 'rubocop', '~> 1.36', require: false
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -28,7 +28,7 @@ gem 'rubocop', '~> 1.36', require: false
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
