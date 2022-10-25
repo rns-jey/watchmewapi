@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module V1
+  # Registrations Endpoints
   class UsersController < ApplicationController
     def create
       @user = User.new(user_params)
@@ -12,8 +15,8 @@ module V1
 
     private
 
-      def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation)
-      end
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation)
+    end
   end
 end
