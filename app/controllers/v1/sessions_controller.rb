@@ -11,9 +11,11 @@ module V1
       @user = User.where(email: params[:email]).first
 
       if @user&.valid_password?(params[:password])
-        render :create, status: :created
+        jwt = WebToken.encode(@user)
+
+        render :create, locals: { token: jwt }, status: :created
       else
-        head(:unauthorized)
+        render json: { error: 'Invalid user credentials' }, status: :unauthorized
       end
     end
 
