@@ -5,7 +5,7 @@ json.call(
   :id,
   :name,
   :address,
-  :tax_rate,
+  :vat_rate,
   :default_currency,
   :tax_payer_id
 )
