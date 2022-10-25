@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
+gem 'jwt'
 gem 'net-smtp', require: false
 gem 'rubocop', '~> 1.36', require: false
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
