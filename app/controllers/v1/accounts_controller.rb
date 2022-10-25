@@ -3,6 +3,8 @@
 module V1
   # Manages the Account Model
   class AccountsController < ApplicationController
+    before_action :authenticate_user!
+
     def create
       account = current_user.accounts.build(account_params)
 
